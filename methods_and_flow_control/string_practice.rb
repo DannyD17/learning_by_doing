@@ -8,4 +8,5 @@ puts my_string.upcase
 puts my_string.capitalize.gsub('string', "'string'")
 puts "The string '#{my_string}' has #{my_string.length} characters"
 puts my_string.reverse
-puts my_string.replace('practice ' * 3).rstrip + '!'
+my_string = my_string.slice('practice ') * 3
+puts my_string.rstrip + '!'
