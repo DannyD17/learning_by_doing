@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-my_array_veriable = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+my_array_veriable = (1..10).to_a
 
 puts my_array_veriable.join('...') + '...'
 puts "T-#{my_array_veriable.reverse.join(', ')}...  BLASTOFF!"
