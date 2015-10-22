@@ -1,21 +1,19 @@
 #!/usr/bin/env ruby
 
-numbers = Array(1..100)
-fizzbuzz = []
-
-numbers.each do |number|
+def fizzbuzz(number)
   if number % 3 == 0 && number % 5 == 0
-    fizzbuzz.push('FizzBuzz')
-
+    'FizzBuzz'
   elsif number % 3 == 0
-    fizzbuzz.push('Fizz')
-
+    'Fizz'
   elsif number % 5 == 0
-    fizzbuzz.push('Buzz')
-
+    'Buzz'
   else
-    fizzbuzz.push(number)
-
+    number
   end
 end
+
+numbers = Array(1..100)
+fizzbuzz = numbers.map { |number| number = fizzbuzz(number) }
+
+
 puts fizzbuzz
