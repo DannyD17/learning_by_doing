@@ -1,5 +1,6 @@
 AllCops:
   Exclude:
-    - "Guardfile"
-    - "Gemfile"
-    - "homework_tester/**/*"
+    - 'Guardfile'
+    - 'Gemfile'
+    - 'homework_tester/**/*'
+    - 'objects_tdd/*'
