@@ -5,7 +5,7 @@
 # After a new class is made, try to make some coffee (variable.make_coffee)
 # or drink coffee (variable.drink_coffee)
 # There are other methods available to use, they are
-# add_coffee_grinds : adds grinds to the coffee machine
+# add_coffee_grinds? : adds grinds to the coffee machine
 # add_water(cups) : adds water to the coffee machine
 # power : turns on the coffee machine
 # pour_coffee : pours coffee from pot into mug
@@ -22,7 +22,7 @@ class CoffeeMaker
     puts 'You feel like drinking some coffee (drink_coffee)'
   end
 
-  def add_coffee_grinds
+  def add_coffee_grinds?
     @coffee_grinds = true
     puts 'There are now coffee grinds in the machine'
   end
@@ -36,7 +36,7 @@ class CoffeeMaker
     end
   end
 
-  def power
+  def power?
     if @power == false
       @power = true
       puts 'The coffee machine is on'
@@ -53,11 +53,11 @@ class CoffeeMaker
   # ease of reading and functionality cop disabled
   def make_coffee
     if @coffee_grinds == false
-      puts 'You need to add coffee grinds (add_coffee_grinds)'
+      puts 'You need to add coffee grinds (add_coffee_grinds?)'
     elsif @water == 0.0
       puts 'You need to add water to the coffee machine (add_water(number of cups))'
     elsif @power == false
-      puts 'You need to turn on the coffee machine (power)'
+      puts 'You need to turn on the coffee machine (power?)'
     else
       @coffee += @water
       @water = 0.0
@@ -109,3 +109,19 @@ class CoffeeMaker
   private :fill_mug
 end
 # rubocop:enable Metrics/LineLength
+
+coffee_maker = CoffeeMaker.new
+coffee_maker.make_coffee
+coffee_maker.add_coffee_grinds?
+coffee_maker.add_water(10)
+coffee_maker.power?
+coffee_maker.make_coffee
+coffee_maker.drink_coffee
+coffee_maker.pour_coffee(5)
+coffee_maker.drink_coffee
+puts "#{coffee_maker.coffee} cups of coffee left in the pot"
+coffee_maker.pour_coffee(2)
+coffee_maker.drink_coffee
+coffee_maker.pour_coffee(2)
+coffee_maker.drink_coffee
+coffee_maker.pour_coffee(5)
