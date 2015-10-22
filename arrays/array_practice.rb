@@ -21,7 +21,5 @@ puts "If we add 5 at the beginning of the array, we're left\
 puts "If we add 6 at the end of the array, we're left\
  with [#{my_array_veriable.push(6).join(',')}]"
 puts "Only the elements #{my_array_veriable.select { |num| num > 8 }} are > 8."
-
-my_array_veriable = []
 puts "If we remove all the elements, then the length of the\
- array is #{my_array_veriable.length}"
+ array is #{my_array_veriable.clear.length}"
