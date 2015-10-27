@@ -15,12 +15,12 @@ class CashRegister
 
   def pay(amount_paid)
     if amount_paid > @total
-      change = currency(@total - amount_paid).abs
+      change = currency(amount_paid - @total)
       puts "Your change is $#{change}"
       @total = 0.00
     else
       @total -= amount_paid
-      puts "Your new total is $#{@total}"
+      puts "Your new total is $#{total}"
     end
   end
 
