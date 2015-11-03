@@ -7,7 +7,7 @@ describe CashRegister do
     end
   end
 
-  describe 'purchase(amount)' do
+  describe '#purchase(amount)' do
     before(:each) do
       subject.purchase(3.78)
     end
